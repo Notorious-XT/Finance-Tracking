@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Income and Expense Tracker</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <br>
+    <header>
+        <h1>Income and Expense Tracker</h1>
+    </header>
+    <main>
+        <section id="add-transaction">
+            <h2>Add Transaction</h2>
+            <div class="input-container">
+                <input type="text" id="description" placeholder="Description">
+                <input type="number" id="amount" placeholder="Amount">
+            </div>
+            <div class="input-container">
+                <select id="transaction-type">
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+                <button id="add-button">Add</button>
+            </div>
+        </section>
+
+        <section id="transaction-list">
+            <h2>Transaction History</h2>
+            <ul id="transactions">
+                <!-- Transactions will be added here dynamically -->
+            </ul>
+        </section>
+    </main>
+    <br>
+    <br>
+    <aside>
+        <div id="analytics" >
+            <h2>Analytics and Insights</h2>
+            <div class="analytics-box">
+                <p>Total Income:</p>
+                <span id="total-income">0.00</span>
+            </div>
+            <div class="analytics-box">
+                <p>Total Expenses:</p>
+                <span id="total-expenses">0.00</span>
+            </div>
+            <div class="analytics-box">
+                <p>Balance:</p>
+                <span id="balance">0.00</span>
+            </div>
+            <div class="chart-container">
+                <canvas id="chart" width="200" height="200"  ></canvas>
+            </div>
+        </div>
+        <div id="suggested-bad-expenses">
+            <h2>Suggested Bad Expenses</h2>
+            <ul id="bad-expenses">
+                <!-- Suggested bad expenses will be added here dynamically -->
+            </ul>
+        </div>
+    </aside>
+    <br>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
